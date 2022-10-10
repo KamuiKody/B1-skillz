@@ -51,10 +51,13 @@ local function createSkillMenu()
 end
 
 RegisterNUICallback('close', function()
+    TriggerScreenblurFadeOut(1000)
     SendNUIMessage({action = "close"})
     SetNuiFocus(false)
+    exports['Roda_PauseMenu']:OpenPauseMenu()
 end)
 
-RegisterCommand(Config.Skillmenu, function()
+RegisterNetEvent('b1-skillz:open', function()
+    TriggerScreenblurFadeIn(1)
     createSkillMenu()
 end)

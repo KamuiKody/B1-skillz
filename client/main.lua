@@ -82,7 +82,7 @@ CreateThread(function() -- Shooting
                     end
                 end
             else
-                Wait(1000)
+                Wait(2000)
             end
         end
         Wait(100)
